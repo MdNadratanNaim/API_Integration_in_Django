@@ -1,0 +1,49 @@
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #ddd;
+}
+
+.navbar {
+    top: 10px;
+    left: 0;
+    height: auto;
+    width: auto;
+    position: fixed;
+    padding: 20px;
+    background-color: transparent;
+    overflow-wrap: inherit;
+}
+
+.navbar-toggler {
+    top: 0;
+    right: inherit;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    border-width: 3px;
+}
+
+#navbarsExample01 {
+    position: fixed;
+    top: 60px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+.nav-item {
+    background-color: #ddd;
+    padding-left: 4px;
+    padding-right: 4px;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+}

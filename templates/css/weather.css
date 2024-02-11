@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.title {
+    color: #fff;
+    background-color: #444;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.title_div {
+    text-align: center;
+    margin: auto;
+    width: 500px;
+}
+
+.content {
+    margin: auto;
+}
+
+.button_s {
+    padding: 1%;
+    background-color: #2156c9;
+    color: #fff;
+    font-size: 250%;
+    border-width: 0px;
+    margin: auto;
+    width: 400px;
+    border-radius: 15px;
+}
+
+.container_sm {
+    padding-bottom: 10%;
+}

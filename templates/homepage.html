@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+
+
+<style>
+{% block style %}
+{% include "homepage.css" %}
+{% endblock style %}
+</style>
+
+
+
+{% block script %}
+<script>
+    // Hide class_1 and show class_2
+    function changeClass(event, class_1, class_2) {
+        event.preventDefault(); // Prevent the link from being followed
+
+        var elements_1 = document.getElementsByClassName(class_1);
+        for (var i = 0; i < elements_1.length; i++) {
+            var element_1 = elements_1[i];
+            if (element_1.classList.contains('nav-link')) {
+                element_1.classList.remove('active');
+            } else {
+                element_1.classList.add('d-none');
+
+            }
+        }
+
+        var elements_2 = document.getElementsByClassName(class_2);
+        for (var i = 0; i < elements_2.length; i++) {
+            var element_2 = elements_2[i];
+            if (element_2.classList.contains('nav-link')) {
+                element_2.classList.add('active');
+            } else {
+                element_2.classList.remove('d-none')
+            }
+        }
+    }
+</script>
+{% endblock script %}
+
+
+{% block content %}
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active non_features non_contact home_ture" href="#" onclick="changeClass(event, 'non_home', 'home_ture')">Home</a>
+                <a class="nav-link non_home non_contact features_true" href="#" onclick="changeClass(event, 'non_features', 'features_true')">Features</a>
+                <a class="nav-link non_home non_features contact_true" href="#" onclick="changeClass(event, 'non_contact', 'contact_true')">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <!-- Home -->
+        <h1 class="cover-heading non_features non_contact home_ture">Welcome to API Integration Project!<br><br></h1>
+        <p class="lead non_features non_contact home_ture show_less">
+            I'm excited to introduce you to my very first Django project, where I've dedicated myself to mastering the art of API integration. 
+            As the sole developer behind this endeavor, I've poured my heart and soul into every line of code. <br> <br>
+        </p>
+        <p class="lead non_features non_contact show_more d-none">
+            At this Project, I've worked tirelessly to seamlessly integrate various APIs, ensuring smooth communication and data exchange between different platforms.<br> <br>
+            Thank you for joining me on this journey. I invite you to explore this API Integration Project and experience firsthand the results of my dedication and hard work. <br> <br>
+            Happy exploring! <br> <br> Naim  <br> <br>
+        </p>
+        <p class="lead non_features non_contact home_ture">
+            <a href="#" class="btn btn-lg btn-secondary show_less non_features non_contact home_ture" onclick="changeClass(event, 'show_less', 'show_more')">Show more</a>
+            <a href="#" class="btn btn-lg btn-secondary non_features non_contact show_more d-none" onclick="changeClass(event, 'show_more', 'show_less')">Show less</a>
+        </p>
+
+        <!-- Features -->
+        <h1 class="cover-heading features_true non_contact non_home d-none">Features<br><br></h1>
+
+        <!-- Contact -->
+        <h1 class="cover-heading contact_true non_features non_home d-none">Contact<br><br></h1>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Linkdin <a href="https://www.linkedin.com/in/naim-snigdho-3022031ab">@Naim</a></p>
+        </div>
+    </footer>
+</div>
+
+{% endblock content %}

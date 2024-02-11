@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+
+{% block reference %}
+
+{% endblock reference %}
+
+
+
+{% block style %}
+{% include "weather_form.css" %}
+{% endblock style %}
+
+
+
+{% block content %}
+
+<div class="container-sm">
+    <form class="form_m" action="./result/" method="POST">
+        {% csrf_token %}
+
+        <div class="row">
+            <input class="input_m form-control" type="text" name="city" placeholder="City Name" required=""
+                autofocus="">
+        </div>
+
+        <div class="row">
+            <input class="input_m form-control" type="text" name="country" placeholder="Country Name" required="">
+        </div>
+
+        <div class="row">
+            <input class="button_s" type="submit" value="Search" />
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

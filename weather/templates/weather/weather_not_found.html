@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+
+{% block style%}
+{% include "weather.css" %}
+{% endblock style%}
+
+
+
+{% block content %}
+
+<div class="container-sm">
+    <div class="title_div">
+        <h1 class="title">Weather Info Not Found</h1><br><br><br>
+    </div>
+
+    <strong>
+        <a href="/weather">
+            <button type="button" class="button_s">
+                <b>
+                    <h1>Search Again</h1>
+                </b>
+            </button>
+        </a>
+    </strong>
+</div>
+
+{% endblock content %}

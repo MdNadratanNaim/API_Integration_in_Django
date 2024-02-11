@@ -1,0 +1,39 @@
+# Ignore api keys
+weather/api_keys.py
+
+# Ignore database files
+*.sqlite3
+*.db
+
+# Ignore static files directory
+/static/
+
+# Ignore media files directory
+/media/
+
+# Ignore virtual environment
+venv/
+.env
+
+# Ignore compiled Python files
+*.pyc
+__pycache__
+
+# Ignore local settings file
+local_settings.py
+
+# Ignore secret keys and sensitive information
+*.secret
+
+# Ignore log files
+*.log
+
+# Ignore IDE and editor specific files
+.vscode/
+*.pydevproject
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
